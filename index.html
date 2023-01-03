@@ -11,7 +11,7 @@
     let button = document.getElementsByTagName('button')[0];
     button.addEventListener('click', () => {
         console.log("send to VR");
-        window.vuplex.postMessage({"memoriId": "be2e4a44-890b-483b-a26a-f6e122f36e2b", "tenant": "app.memorytwin.com"});
+        window.vuplex.postMessage({"button":"clicked", "memoriId": "be2e4a44-890b-483b-a26a-f6e122f36e2b", "tenant": "app.memorytwin.com"});
     });
 
 </script>
