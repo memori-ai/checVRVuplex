@@ -1,19 +1,119 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>SEND A TWIN TO VR</h1>
-<p>Example.</p>
-
-<button id="START">SEND</button>
-<script>
-
-    let button = document.getElementsByTagName('button')[0];
-    button.addEventListener('click', () => {
+  <body>
+    <h1>SEND A TWIN TO VR</h1>
+    <p>Example.</p>
+    <button id="START">SEND</button>
+    <script>
+      let button = document.getElementsByTagName('button')[0];
+      button.addEventListener('click', () => {
         console.log("send to VR");
-        window.vuplex.postMessage({"button":"clicked", "memoriId": "be2e4a44-890b-483b-a26a-f6e122f36e2b", "tenant": "app.memorytwin.com"});
-    });
+         var obj = {
+          "button": "clicked",
+          "memoriId": "be2e4a44-890b-483b-a26a-f6e122f36e2b",
+          "avatarFullBodyURL": "https://assets.memori.ai/api/v2/asset/0be4dd60-aa93-4c39-872a-3a3aaddc2623.glb",
+          "tenant": "app.memorytwin.com",
+          "twin": {
+            "memoriID": "be2e4a44-890b-483b-a26a-f6e122f36e2b",
+            "name": "Nunzio",
+            "password": null,
+            "recoveryTokens": null,
+            "newPassword": null,
+            "ownerUserID": null,
+            "ownerUserName": "nunziofiore",
+            "ownerTenantName": "app.memorytwin.com",
+            "memoriConfigurationID": "fd10bb42-98d9-4c08-8e02-2b08bd4e4975",
+            "description": "Questo sono io, Nunzio Fiore, con i miei sogni, le mie parole, i miei progetti.",
+            "engineMemoriID": "1afe57c6-1b69-4a61-96ea-52bf7b8d158e",
+            "isOwner": false,
+            "isGiver": false,
+            "isReceiver": false,
+            "giverTag": null,
+            "giverPIN": null,
+            "privacyType": "PUBLIC",
+            "secretToken": null,
+            "minimumNumberOfRecoveryTokens": null,
+            "totalNumberOfRecoveryTokens": null,
+            "sentInvitations": [],
+            "receivedInvitations": [],
+            "integrations": [{
+              "integrationID": "279387ee-7af5-43b0-b036-70dc347b18a7",
+              "memoriID": "be2e4a44-890b-483b-a26a-f6e122f36e2b",
+              "type": "LANDING_EXPERIENCE",
+              "state": "NEW",
+              "deviceEmails": null,
+              "invocationText": null,
+              "jobID": null,
+              "customData": "{\"linkColor\":\"#C042C1\",\"textColor\":\"#000000\",\"buttonBgColor\":\"#ff00ff\",\"buttonTextColor\":\"#FFFFFF\",\"firstTab\":\"experience\",\"seoTitle\":\"Nunzio\",\"seoDescription\":\"Questo sono io, Nunzio Fiore, con i miei sogni, le mie parole, i miei progetti.\",\"avatar\":\"readyplayerme\",\"avatarURL\":\"https://assets.memori.ai/api/v2/asset/8732ba92-16d8-4b6e-8878-60e392f725d1.glb\",\"name\":\"Avatar\",\"globalBackground\":\"https://assets.memori.ai/api/v2/asset/561f65d8-8879-4cf2-a101-419a240576cd.jpg\",\"blurBackground\":true,\"innerBgColor\":\"light\",\"seoUrl\":\"http://twin.memori.ai\",\"multilanguage\":true,\"showShare\":true,\"avatarFullBodyURL\":\"https://assets.memori.ai/api/v2/asset/0be4dd60-aa93-4c39-872a-3a3aaddc2623.glb\"}",
+              "resources": [],
+              "publish": true,
+              "creationTimestamp": "2022-04-22T17:57:53.148633Z",
+              "lastChangeTimestamp": "2022-05-04T08:49:44.639502Z"
+            }, {
+              "integrationID": "94242b20-2809-4d68-9ea8-4a5e87fed20c",
+              "memoriID": "be2e4a44-890b-483b-a26a-f6e122f36e2b",
+              "type": "GOOGLE",
+              "state": "PUBLISHED",
+              "deviceEmails": null,
+              "invocationText": "Le storie di Nunzio Fiore",
+              "jobID": null,
+              "customData": null,
+              "resources": [],
+              "publish": false,
+              "creationTimestamp": "2021-11-18T14:01:39.144166Z",
+              "lastChangeTimestamp": "2021-12-14T17:28:45.166272Z"
+            }, {
+              "integrationID": "17826a9e-4ced-4c74-be82-da818b08b8a4",
+              "memoriID": "be2e4a44-890b-483b-a26a-f6e122f36e2b",
+              "type": "LANDING_EXPERIENCE",
+              "state": "NEW",
+              "deviceEmails": null,
+              "invocationText": "",
+              "jobID": null,
+              "customData": "{\"linkColor\":\"#f9f9f9\",\"textColor\":\"#ffffff\",\"buttonBgColor\":\"#1530e8\",\"buttonTextColor\":\"#fdfdfd\",\"firstTab\":\"experience\",\"seoTitle\":\"Nunzio\",\"seoDescription\":\"Incontra il mio gemello digitale\",\"globalBackground\":\"https://lh3.googleusercontent.com/proxy/guliC2f6XEOt0U8_wrsnKy9tdj6FZFS17VgDTUMzIT2l0Hr3cly84dheQDx_IQ1-01ThTLTgkX54S5rGZpoG4Q2hT-dwe4JZPlsaivK8yJm_GfDWaw3WjCRUaA\",\"innerBgColor\":\"light\",\"blurBackground\":true,\"name\":\"pagina pubblica\",\"avatarInBlob\":true,\"seoImageShowAvatar\":true,\"innerBgAlpha\":0.1,\"multilanguage\":true}",
+              "resources": [{
+                "name": "globalBackground",
+                "url": "https://backend.memori.ai/api/v1/memoriai/integration/17826a9e-4ced-4c74-be82-da818b08b8a4/resource/cloud/twin.memori.ai/3c04d4d1-1f20-44df-a690-414200aca2f5.png"
+              }],
+              "publish": false,
+              "creationTimestamp": "2021-11-10T14:58:12.467155Z",
+              "lastChangeTimestamp": "2021-12-14T17:28:45.166904Z"
+            }, {
+              "integrationID": "6290389a-7674-4ff7-b795-90a81252034c",
+              "memoriID": "be2e4a44-890b-483b-a26a-f6e122f36e2b",
+              "type": "LANDING_EXPERIENCE",
+              "state": "NEW",
+              "deviceEmails": null,
+              "invocationText": null,
+              "jobID": null,
+              "customData": "{\"avatar\":\"readyplayerme\",\"avatarURL\":\"https://assets.memori.ai/api/v2/asset/98c34df4-a0c1-455a-afa9-ce5db5a48118.glb\",\"name\":\"Avatar\"}",
+              "resources": [],
+              "publish": false,
+              "creationTimestamp": "2022-04-22T17:57:52.84397Z",
+              "lastChangeTimestamp": "2022-04-22T17:57:52.84397Z"
+            }],
+            "avatarURL": "https://assets.memori.ai/api/v2/asset/908ba692-2a8a-47c0-8921-0e6f09937666.png",
+            "coverURL": "https://assets.memori.ai/api/v2/asset/5f15abf0-4b89-42bf-a589-8069fae941d3.jpg",
+            "needsPosition": false,
+            "voiceType": "MALE",
+            "culture": "it-IT",
+            "categories": ["biografico"],
+            "exposed": true,
+            "disableR2R3Loop": false,
+            "disableR4Loop": false,
+            "contentQualityIndex": 686.3999999999999,
+            "contentQualityIndexTimestamp": "2023-01-03T00:00:28.867946Z",
+            "publishedInTheMetaverse": true,
+            "metaverseEnvironment": "synthwave",
+            "blockedUntil": null,
+            "creationTimestamp": "2020-08-04T15:29:07.334799Z",
+            "lastChangeTimestamp": "2023-01-03T08:59:02.058825Z"
+          }
 
-</script>
-</body>
+          console.log(obj);
+          window.vuplex.postMessage(obj);
+          
+      });
+    </script>
+  </body>
 </html>
