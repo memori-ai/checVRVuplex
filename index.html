@@ -2,8 +2,18 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<h1>SEND A TWIN TO VR</h1>
+<p>Example.</p>
 
+<button id="START">SEND</button>
+<script>
+
+    let button = document.getElementsByTagName('button')[0];
+    button.addEventListener('click', () => {
+        console.log("send to VR");
+        window.vuplex.postMessage({"memoriId": "be2e4a44-890b-483b-a26a-f6e122f36e2b", "tenant": "app.memorytwin.com"});
+    });
+
+</script>
 </body>
 </html>
